@@ -87,20 +87,13 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
-  // separate all values
-  var num1 = sumArr[0];
-  var num2 = sumArr[1];
-  var num3 = sumArr[2];
-
-  // add all values
-  var sum1 = sum(num1, num2);
-  var sum2 = sum(sum1[0], num3);
+  var sum = sumAndMultiply(sumArr[0], sumArr[1], sumArr[2]);
 
   // create string
-  var str = `${sumArr.toString()} was passed in as an array of numbers, and ${sum2[0]} is their sum.`;
+  var str = `${sumArr.toString()} was passed in as an array of numbers, and ${sum[0]} is their sum.`;
 
-  // return sum2 and str as an array
-  return [sum2[0], str];
+  // return sum and str as an array
+  return [sum[0], str];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
