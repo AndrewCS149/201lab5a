@@ -115,6 +115,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+  var product = sumAndMultiply(multArr[0], multArr[1], multArr[2]);
+
+  // create string
+  var str = `The numbers ${multArr.toString()} have a product of ${product[1]}.`;
+
+  // return product and str as an array
+  return [product[1], str];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
